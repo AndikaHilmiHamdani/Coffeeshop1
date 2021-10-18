@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Cofeeshop</string>
+    <string name="cappucino">Pada dasarnya, minuman ini adalah campuran dari espresso dan susu seperti minuman-minuman berbasis espresso lainnya. Sepintas, sajian cappuccino hampir tampak serupa dengan minuman latte.</string>
+    <string name="latte"> Espresso atau kopi yang dicampur dengan susu dan memiliki lapisan busa yang tipis di bagian atasnya. Perbandingan antara susu dengan kopi pada caffè latte adalah 2:1.</string>
+    <string name="americano">minuman kopi espresso dengan tambahan air panas. Minuman kopi yang dibuat dengan mencampurkan satu seloki espresso dengan air panas. Air panas yang digunakan dalam minuman ini adalah sebanyak 6 hingga 8 ons.</string>
+
+    <string name="homes">Home</string>
+    <string name="notification">Notification</string>
+    <string name="favorite">Favorite</string>
+    <string name="account">Account</string>
+
+</resources>

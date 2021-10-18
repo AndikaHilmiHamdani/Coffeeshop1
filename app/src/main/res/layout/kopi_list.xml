@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="100dp"
+    android:layout_height="150dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginTop="100dp"
+    app:cardBackgroundColor="#e17f42"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="10dp"
+    android:id="@+id/cardCoffee"
+    android:layout_marginLeft="10dp">
+
+            <ImageView
+                android:id="@+id/imgKopi"
+                android:layout_width="50dp"
+                android:layout_height="75dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="25dp"
+                tools:srcCompat="@tools:sample/avatars"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvRating"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:id="@+id/tvTitle"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="125dp"
+                android:id="@+id/tvPrice"
+                android:textColor="@color/white" />
+
+</androidx.cardview.widget.CardView>

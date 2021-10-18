@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!--Content Main-->
+    <FrameLayout
+        android:id="@+id/fl_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bn_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        app:itemIconTint="@drawable/state_bnv"
+        app:itemTextColor="@drawable/state_bnv"
+        app:menu="@menu/bottomnavigation_menu" />
+
+
+</RelativeLayout>
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<RelativeLayout-->
+<!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    tools:context=".MainActivity"-->
+<!--    android:background="#eba77d"-->
+<!--    android:id="@+id/relativeHome">-->
+
+<!--    <ImageButton-->
+<!--        android:id="@+id/hamButton"-->
+<!--        android:layout_width="24dp"-->
+<!--        android:layout_height="24dp"-->
+<!--        android:layout_marginLeft="20dp"-->
+<!--        android:layout_marginTop="5dp"-->
+<!--        android:background="@drawable/hamberger"-->
+<!--        android:textColor="@color/white"-->
+<!--        tools:ignore="SpeakableTextPresentCheck" />-->
+<!--    <ImageButton-->
+<!--        android:layout_width="24dp"-->
+<!--        android:layout_height="24dp"-->
+<!--        android:background="@drawable/search"-->
+<!--        android:layout_marginLeft="300dp"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:layout_marginTop="5dp"-->
+<!--        android:id="@+id/searchButton"-->
+<!--        />-->
+
+<!--    <ImageButton-->
+<!--        android:layout_width="24dp"-->
+<!--        android:layout_height="24dp"-->
+<!--        android:background="@drawable/keranjang"-->
+<!--        android:layout_marginLeft="350dp"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:layout_marginTop="5dp"-->
+<!--        android:id="@+id/cartButton"-->
+<!--        />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/titleTextView"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="50dp"-->
+<!--        android:gravity="center"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:text="Best Coffee in town"-->
+<!--        android:layout_marginLeft="50dp"-->
+<!--        />-->
+
+<!--&lt;!&ndash;   Scroll view menu &ndash;&gt;-->
+<!--    <ScrollView-->
+<!--        android:id="@+id/scrollView1"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        >-->
+
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:orientation="horizontal">-->
+
+<!--            <androidx.cardview.widget.CardView-->
+<!--                android:layout_width="100dp"-->
+<!--                android:layout_height="150dp"-->
+<!--                android:layout_marginLeft="50dp"-->
+<!--                android:layout_marginTop="100dp"-->
+<!--                app:cardBackgroundColor="#e17f42"-->
+<!--                >-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="50dp"-->
+<!--                    android:layout_height="75dp"-->
+<!--                    android:layout_marginLeft="25dp"-->
+<!--                    android:layout_marginTop="25dp"-->
+<!--                    android:src="@drawable/kopi2" />-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="4.7"-->
+<!--                    android:textColor="@color/white" />-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="100dp"-->
+<!--                    android:text="Cappucino"-->
+<!--                    android:textColor="@color/white" />-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="125dp"-->
+<!--                    android:text="Rp.15.000"-->
+<!--                    android:textColor="@color/white" />-->
+
+<!--            </androidx.cardview.widget.CardView>-->
+
+<!--            <androidx.cardview.widget.CardView-->
+<!--                android:layout_width="100dp"-->
+<!--                android:layout_height="150dp"-->
+<!--                android:layout_marginLeft="15dp"-->
+<!--                android:layout_marginTop="100dp"-->
+<!--                app:cardBackgroundColor="#e17f42">-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="50dp"-->
+<!--                    android:layout_height="75dp"-->
+<!--                    android:layout_marginLeft="25dp"-->
+<!--                    android:layout_marginTop="25dp"-->
+<!--                    android:src="@drawable/kopi3" />-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="4.6"-->
+<!--                    android:textColor="@color/white" />-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="100dp"-->
+<!--                    android:text="Latte"-->
+<!--                    android:textColor="@color/white" />-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="125dp"-->
+<!--                    android:text="Rp.18.000"-->
+<!--                    android:textColor="@color/white" />-->
+<!--            </androidx.cardview.widget.CardView>-->
+
+<!--            <androidx.cardview.widget.CardView-->
+<!--                android:layout_width="100dp"-->
+<!--                android:layout_height="150dp"-->
+<!--                android:layout_marginLeft="15dp"-->
+<!--                android:layout_marginTop="100dp"-->
+<!--                app:cardBackgroundColor="#e17f42">-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="50dp"-->
+<!--                    android:layout_height="75dp"-->
+<!--                    android:layout_marginLeft="25dp"-->
+<!--                    android:layout_marginTop="25dp"-->
+<!--                    android:src="@drawable/kopi3" />-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="4.5"-->
+<!--                    android:textColor="@color/white" />-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="100dp"-->
+<!--                    android:text="Americano"-->
+<!--                    android:textColor="@color/white" />-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="125dp"-->
+<!--                    android:text="Rp.18.000"-->
+<!--                    android:textColor="@color/white" />-->
+<!--            </androidx.cardview.widget.CardView>-->
+<!--        </LinearLayout>-->
+<!--    </ScrollView>-->
+
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Most loved"-->
+
+<!--        android:textStyle="bold"-->
+<!--        android:layout_marginTop="275dp"-->
+<!--        android:layout_marginLeft="50dp"-->
+<!--        />-->
+
+<!--    &lt;!&ndash;   Scroll view menu &ndash;&gt;-->
+<!--    <ScrollView-->
+<!--        android:id="@+id/scrollView2"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_marginTop="225dp">-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:orientation="horizontal">-->
+
+<!--            <androidx.cardview.widget.CardView-->
+<!--                android:layout_width="100dp"-->
+<!--                android:layout_height="150dp"-->
+<!--                android:layout_marginLeft="50dp"-->
+<!--                android:layout_marginTop="100dp"-->
+<!--                app:cardBackgroundColor="#e17f42"-->
+
+<!--                >-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/kopi2"-->
+<!--                    android:layout_width="50dp"-->
+<!--                    android:layout_height="75dp"-->
+<!--                    android:layout_marginLeft="25dp"-->
+<!--                    android:layout_marginTop="25dp"-->
+<!--                    android:src="@drawable/kopi2" />-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="4.7"-->
+<!--                    android:textColor="@color/white" />-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="100dp"-->
+<!--                    android:text="Cappucino"-->
+<!--                    android:textColor="@color/white" />-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="125dp"-->
+<!--                    android:text="Rp.15.000"-->
+<!--                    android:textColor="@color/white" />-->
+
+
+<!--            </androidx.cardview.widget.CardView>-->
+
+<!--            <androidx.cardview.widget.CardView-->
+<!--                android:layout_width="100dp"-->
+<!--                android:layout_height="150dp"-->
+<!--                android:layout_marginLeft="15dp"-->
+<!--                android:layout_marginTop="100dp"-->
+<!--                app:cardBackgroundColor="#e17f42">-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/kopi3"-->
+<!--                    android:layout_width="50dp"-->
+<!--                    android:layout_height="75dp"-->
+<!--                    android:layout_marginLeft="25dp"-->
+<!--                    android:layout_marginTop="25dp"-->
+<!--                    android:src="@drawable/kopi3" />-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="4.6"-->
+<!--                    android:textColor="@color/white" />-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="100dp"-->
+<!--                    android:text="Latte"-->
+<!--                    android:textColor="@color/white" />-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="125dp"-->
+<!--                    android:text="Rp.18.000"-->
+<!--                    android:textColor="@color/white" />-->
+<!--            </androidx.cardview.widget.CardView>-->
+
+<!--            <androidx.cardview.widget.CardView-->
+<!--                android:layout_width="100dp"-->
+<!--                android:layout_height="150dp"-->
+<!--                android:layout_marginLeft="15dp"-->
+<!--                android:layout_marginTop="100dp"-->
+<!--                app:cardBackgroundColor="#e17f42">-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/kopi4"-->
+<!--                    android:layout_width="50dp"-->
+<!--                    android:layout_height="75dp"-->
+<!--                    android:layout_marginLeft="25dp"-->
+<!--                    android:layout_marginTop="25dp"-->
+<!--                    android:src="@drawable/kopi3" />-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="4.5"-->
+<!--                    android:textColor="@color/white" />-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="100dp"-->
+<!--                    android:text="Americano"-->
+<!--                    android:textColor="@color/white" />-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="125dp"-->
+<!--                    android:text="Rp.17.000"-->
+<!--                    android:textColor="@color/white" />-->
+<!--            </androidx.cardview.widget.CardView>-->
+<!--        </LinearLayout>-->
+<!--    </ScrollView>-->
+
+<!--    &lt;!&ndash;    Footer &ndash;&gt;-->
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_marginTop="650dp"-->
+<!--        android:background="@color/white"-->
+<!--        >-->
+
+<!--        <ImageView-->
+<!--            android:layout_width="24dp"-->
+<!--            android:layout_height="24dp"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_marginLeft="85dp"-->
+<!--            android:src="@drawable/home" />-->
+<!--        <ImageView-->
+<!--            android:layout_width="24dp"-->
+<!--            android:layout_height="24dp"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_marginLeft="85dp"-->
+<!--            android:src="@drawable/home" />-->
+<!--        <ImageView-->
+<!--            android:layout_width="24dp"-->
+<!--            android:layout_height="24dp"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_marginLeft="85dp"-->
+<!--            android:src="@drawable/fav" />-->
+<!--    </LinearLayout>-->
+
+<!--</RelativeLayout>-->
