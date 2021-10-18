@@ -38,14 +38,14 @@ public class KopiCardAdapter extends RecyclerView.Adapter<KopiCardAdapter.CardVi
         View view = layoutInflater.inflate(R.layout.kopi_list, parent,false);
 
         //Intent to detail
-        view.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Context context = view.getContext();
-                Intent intent = new Intent(context, AmericanoActivity.class);
-                context.startActivity(intent);
-            }
-        });
+//        view.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Context context = view.getContext();
+//                Intent intent = new Intent(context, DetailActivity.class);
+//                context.startActivity(intent);
+//            }
+//        });
         return new CardViewHolder(view);
     }
 
@@ -60,6 +60,22 @@ public class KopiCardAdapter extends RecyclerView.Adapter<KopiCardAdapter.CardVi
         holder.pict.setImageResource(kopiCard.get(position).getImage());
 
         //Detail
+        holder.setItemClickListener(new ItemClickListener() {
+            @Override
+            public void onItemClickListener(View v, int position) {
+                String title = kopiCard.get(position).getTitle();
+                String desc = kopiCard.get(position).getDesc();
+                int image = kopiCard.get(position).getImage();
+                int price = kopiCard.get(position).getPrice();
+                Intent intent = new Intent(context,DetailActivity.class);
+                intent.putExtra("tvTitle",title);
+                intent.putExtra("tvDesc","desc");
+                intent.putExtra("image", kopiCard.get(position).getImage());
+                intent.putExtra("price",kopiCard.get(position).getPrice());
+
+                context.startActivity(intent);
+            }
+        });
 
     }
 
@@ -68,18 +84,27 @@ public class KopiCardAdapter extends RecyclerView.Adapter<KopiCardAdapter.CardVi
         return kopiCard.size();
     }
 
-    public class CardViewHolder extends RecyclerView.ViewHolder {
+    public class CardViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         private TextView tvTitle,tvPrice,tvRating,tvDesc;
         private ImageView pict;
+        private ItemClickListener itemClickListener;
+
         public CardViewHolder(@NonNull View itemView) {
             super(itemView);
 
             tvTitle = itemView.findViewById(R.id.tvTitle);
             tvPrice = itemView.findViewById(R.id.tvPrice);
             tvRating = itemView.findViewById(R.id.tvRating);
-            //tvDesc = itemView.findViewById(R.id.tvDesc);
+            tvDesc = itemView.findViewById(R.id.tvDesc);
             pict = itemView.findViewById(R.id.imgKopi);
         }
 
+        @Override
+        public void onClick(View view) {
+            this.itemClickListener.onItemClickListener(view,getLayoutPosition());
+        }
+        public void setItemClickListener(ItemClickListener ic){
+            this.itemClickListener = ic;
+        }
     }
 }

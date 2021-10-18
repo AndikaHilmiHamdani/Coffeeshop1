@@ -10,8 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Cofeeshop">
         <activity
+            android:name=".DetailActivity"
+            android:exported="true" />
+        <activity
             android:name=".CartActivity"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".Americano"
             android:exported="true" />
