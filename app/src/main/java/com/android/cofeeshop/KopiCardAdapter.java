@@ -18,14 +18,17 @@ public class KopiCardAdapter extends RecyclerView.Adapter<KopiCardAdapter.CardVi
 
     //kopi list
     private List<KopiModel> kopiCard;
-    public KopiCardAdapter(Context context, List<KopiModel> kopiCard) {
+    public KopiCardAdapter( List<KopiModel> kopiCard,Context context) {
         this.kopiCard = kopiCard;
         this.context = context;
     }
 
     public KopiCardAdapter(List<KopiModel> kopiArrayList) {
         this.kopiCard = kopiArrayList;
+
     }
+
+
 
     @NonNull
     @Override
