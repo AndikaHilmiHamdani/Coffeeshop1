@@ -53,12 +53,12 @@ public class HomeFragment extends Fragment{
         kopiArrayList = new ArrayList<>();
         kopiArrayList.add(new KopiModel("Americano","4.7","blbl",18000,R.drawable.kopi2));
         kopiArrayList.add(new KopiModel("Cappucino","4.6","blbl",17000,R.drawable.kopi3));
-        kopiArrayList.add(new KopiModel("Americano","4.7","blbl",18000,R.drawable.kopi2));
-        kopiArrayList.add(new KopiModel("Cappucino","4.6","blbl",17000,R.drawable.kopi3));
-        kopiArrayList.add(new KopiModel("Americano","4.7","blbl",18000,R.drawable.kopi2));
-        kopiArrayList.add(new KopiModel("Cappucino","4.6","blbl",17000,R.drawable.kopi3));
-        kopiArrayList.add(new KopiModel("Americano","4.7","blbl",18000,R.drawable.kopi2));
-        kopiArrayList.add(new KopiModel("Cappucino","4.6","blbl",17000,R.drawable.kopi3));
+        kopiArrayList.add(new KopiModel("Latte","4.7","blbl",18000,R.drawable.kopi2));
+        kopiArrayList.add(new KopiModel("Espresso","4.6","blbl",17000,R.drawable.kopi3));
+        kopiArrayList.add(new KopiModel("v60","4.7","blbl",18000,R.drawable.kopi2));
+        kopiArrayList.add(new KopiModel("Affogatto","4.6","blbl",17000,R.drawable.kopi3));
+        kopiArrayList.add(new KopiModel("Gelato","4.7","blbl",18000,R.drawable.kopi2));
+        kopiArrayList.add(new KopiModel("Lemon Tea","4.6","blbl",17000,R.drawable.kopi3));
         return kopiArrayList;
     }
 }
