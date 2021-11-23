@@ -5,10 +5,10 @@ import java.io.Serializable;
 public class CoffeeModel implements Serializable {
     private static final long serialVersionUID = 1L;
     private String name;
-    private String price;
+    private int price, totalItem;
     private String image;
 
-    public CoffeeModel(String name, String price, String image) {
+    public CoffeeModel(String name, int price, String image) {
         this.name = name;
         this.price = price;
         this.image= image;
@@ -22,12 +22,20 @@ public class CoffeeModel implements Serializable {
         this.name = name;
     }
 
-    public String getPrice() {
+    public int getPrice() {
         return price;
     }
 
-    public void setPrice(String emailId) {
-        this.price = emailId;
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+    public void setTotalItem(int totalItem) {
+        this.totalItem = totalItem;
+    }
+
+    public int getTotalItem() {
+        return totalItem;
     }
 
     public String getImage() {

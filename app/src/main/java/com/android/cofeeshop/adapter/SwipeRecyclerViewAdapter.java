@@ -6,6 +6,7 @@ import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -24,6 +25,7 @@ import java.util.List;
 
 public class SwipeRecyclerViewAdapter extends RecyclerSwipeAdapter<SwipeRecyclerViewAdapter.SimpleViewHolder> {
 
+    private  int plusBtn= 0;
     private Context mContext;
     private ArrayList<CoffeeModel> coffeeList;
 
@@ -49,6 +51,9 @@ public class SwipeRecyclerViewAdapter extends RecyclerSwipeAdapter<SwipeRecycler
         viewHolder.Name.setText(item.getName());
         viewHolder.Price.setText(item.getPrice());
         viewHolder.swipeLayout.setShowMode(SwipeLayout.ShowMode.PullOut);
+
+        //plus
+
 
         //dari kiri
         viewHolder.swipeLayout.addDrag(SwipeLayout.DragEdge.Left, viewHolder.swipeLayout.findViewById(R.id.bottom_wrapper1));
@@ -87,6 +92,18 @@ public class SwipeRecyclerViewAdapter extends RecyclerSwipeAdapter<SwipeRecycler
             }
         });
 
+        //plusbtn
+        viewHolder.plusButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                plusBtn+= Integer.parseInt(String.valueOf(item.getTotalItem()));
+                String countItem = Integer.toString(plusBtn);
+                int result1 = Integer.parseInt(countItem.getBytes().toString());
+                viewHolder.countItem.setText(String.valueOf(result1));
+            }
+
+        });
+
         viewHolder.swipeLayout.getSurfaceView().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -121,17 +138,20 @@ public class SwipeRecyclerViewAdapter extends RecyclerSwipeAdapter<SwipeRecycler
     public static class SimpleViewHolder extends RecyclerView.ViewHolder{
         public SwipeLayout swipeLayout;
         public TextView Name;
+        public EditText countItem;
         public TextView Price;
         public ImageButton Delete;
         public ImageView imageCoffee;
-        public ImageButton btnLocation;
+        public ImageButton btnLocation, plusButton;
         public SimpleViewHolder(View itemView) {
             super(itemView);
             swipeLayout = (SwipeLayout) itemView.findViewById(R.id.swipe);
             Name = (TextView) itemView.findViewById(R.id.Name);
             Price = (TextView) itemView.findViewById(R.id.price);
+            countItem = (EditText) itemView.findViewById(R.id.countItem);
             Delete = (ImageButton) itemView.findViewById(R.id.lyt_delete);
             btnLocation = (ImageButton) itemView.findViewById(R.id.btnLocation);
+            plusButton = (ImageButton) itemView.findViewById(R.id.plusButton);
             imageCoffee =(ImageView) itemView.findViewById(R.id.imageViewInfo);
         }
     }

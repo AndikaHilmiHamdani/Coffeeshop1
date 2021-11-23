@@ -92,37 +92,37 @@
             android:layout_marginHorizontal="30dp"
             android:layout_marginVertical="20dp"
             >
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/rounded_corner"
-                android:layout_marginVertical="20dp"
-                android:orientation="vertical"
                 android:layout_alignParentEnd="true"
-                >
-            </LinearLayout>
+                android:layout_marginVertical="20dp"
+                android:background="@drawable/rounded_corner"
+                android:orientation="vertical"></LinearLayout>
 
             <ImageView
                 android:id="@+id/imageViewInfo"
                 android:layout_width="150dp"
                 android:layout_height="match_parent" />
+
             <LinearLayout
                 android:layout_width="170dp"
                 android:layout_height="wrap_content"
-                android:layout_marginVertical="20dp"
-                android:padding="10dp"
-                android:orientation="vertical"
                 android:layout_alignParentEnd="true"
-                >
+                android:layout_marginVertical="20dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
                 <TextView
                     android:id="@+id/Name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:text="Name"
-                    android:textStyle="bold"
                     android:textColor="@android:color/white"
-                    android:textSize="14sp"/>
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/price"
@@ -130,32 +130,35 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:text="IDR"
-                    android:textStyle="bold"
                     android:textColor="@android:color/white"
-                    android:textSize="14sp"/>
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="10dp">
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
                     <ImageButton
                         android:layout_width="24dp"
                         android:layout_height="24dp"
-                        android:background="@drawable/minus"
-                        />
-                    <TextView
+                        android:background="@drawable/minus" />
+
+                    <EditText
                         android:id="@+id/countItem"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="10dp"
                         android:text="0"
                         android:textColor="@android:color/white"
-                        android:textSize="15sp"/>
+                        android:textSize="15sp" />
+
                     <ImageButton
+                        android:id="@+id/plusButton"
                         android:layout_width="24dp"
                         android:layout_height="24dp"
-                        android:background="@drawable/plus"/>
+                        android:background="@drawable/plus" />
                 </LinearLayout>
 
             </LinearLayout>

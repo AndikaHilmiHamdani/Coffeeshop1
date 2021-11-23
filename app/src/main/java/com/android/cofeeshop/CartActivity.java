@@ -71,8 +71,8 @@ public class CartActivity extends AppCompatActivity {
     }
     public void loadData() {
             //mDataSet.add(new CoffeeModel("AMERICANO", "18K", "@drawable/kopi1"));
-            mDataSet.add(new CoffeeModel("LATTE", "18K", "@drawable/kopi2"));
-            mDataSet.add(new CoffeeModel("MACCHIATO", "20K", "@drawable/kopi3"));
+            mDataSet.add(new CoffeeModel("LATTE", 18000, "@drawable/kopi2"));
+            mDataSet.add(new CoffeeModel("MACCHIATO", 20000, "@drawable/kopi3"));
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
