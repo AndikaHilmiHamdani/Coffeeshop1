@@ -96,10 +96,8 @@ public class SwipeRecyclerViewAdapter extends RecyclerSwipeAdapter<SwipeRecycler
         viewHolder.plusButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                plusBtn+= Integer.parseInt(String.valueOf(item.getTotalItem()));
-                String countItem = Integer.toString(plusBtn);
-                int result1 = Integer.parseInt(countItem.getBytes().toString());
-                viewHolder.countItem.setText(String.valueOf(result1));
+                int qty = Integer.parseInt(viewHolder.jumlah.getText().toString()) ;
+                viewHolder.jumlah.setText(String.valueOf(++qty));
             }
 
         });
@@ -138,7 +136,7 @@ public class SwipeRecyclerViewAdapter extends RecyclerSwipeAdapter<SwipeRecycler
     public static class SimpleViewHolder extends RecyclerView.ViewHolder{
         public SwipeLayout swipeLayout;
         public TextView Name;
-        public EditText countItem;
+        public EditText jumlah;
         public TextView Price;
         public ImageButton Delete;
         public ImageView imageCoffee;
@@ -148,7 +146,7 @@ public class SwipeRecyclerViewAdapter extends RecyclerSwipeAdapter<SwipeRecycler
             swipeLayout = (SwipeLayout) itemView.findViewById(R.id.swipe);
             Name = (TextView) itemView.findViewById(R.id.Name);
             Price = (TextView) itemView.findViewById(R.id.price);
-            countItem = (EditText) itemView.findViewById(R.id.countItem);
+            jumlah = (EditText) itemView.findViewById(R.id.jumlah);
             Delete = (ImageButton) itemView.findViewById(R.id.lyt_delete);
             btnLocation = (ImageButton) itemView.findViewById(R.id.btnLocation);
             plusButton = (ImageButton) itemView.findViewById(R.id.plusButton);

@@ -38,14 +38,14 @@ public class KopiCardAdapter extends RecyclerView.Adapter<KopiCardAdapter.CardVi
         View view = layoutInflater.inflate(R.layout.kopi_list, parent,false);
 
         //Intent to detail
-//        view.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Context context = view.getContext();
-//                Intent intent = new Intent(context, DetailActivity.class);
-//                context.startActivity(intent);
-//            }
-//        });
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Context context = view.getContext();
+                Intent intent = new Intent(context, DetailActivity.class);
+                context.startActivity(intent);
+            }
+        });
         return new CardViewHolder(view);
     }
 

@@ -146,7 +146,7 @@
                         android:background="@drawable/minus" />
 
                     <EditText
-                        android:id="@+id/countItem"
+                        android:id="@+id/jumlah"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="10dp"
