@@ -30,8 +30,14 @@ public class DetailActivity extends AppCompatActivity {
         kurang.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int qty = Integer.parseInt(jumlah.getText().toString()) ;
-                jumlah.setText(String.valueOf(--qty));
+                int qty =0;
+                if (qty == 0){
+                    Toast.makeText(DetailActivity.this,"jumlah pesanan anda salah" ,Toast.LENGTH_SHORT).show();
+                } else {
+                    qty = Integer.parseInt(jumlah.getText().toString()) ;
+                    jumlah.setText(String.valueOf(--qty));
+                }
+
             }
         });
     }
